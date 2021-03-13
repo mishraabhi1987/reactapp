@@ -20,7 +20,7 @@ const App = () => {
        <Menu />
        <div className="container-fluid" style={{background: "rgb(255,255,255, 0.9)", minHeight: "630px", borderRadius: "5px", width: "99%", margin: "0 auto", padding: "20px"}}>
        <Switch>
-         <Route exact path="/" component={Home} />
+         <Route exact path="/reactapp/" component={Home} />
          <Route exact path="/search" component={Search} />
          <Route path="/notes" component={Mynote} />
          <Route path="/Todolist" component={Todolist} />

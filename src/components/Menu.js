@@ -29,7 +29,7 @@ const Menu = () => {
     return (
         <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="/"><img src={mypic} style={{width: "50px", height: "50px", borderRadius: "25px"}} /> Abhishek App</a>
+                <a className="navbar-brand" href="/reactapp/"><img src={mypic} style={{width: "50px", height: "50px", borderRadius: "25px"}} /> Abhishek App</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -37,7 +37,7 @@ const Menu = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                     <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/">Home</NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/">Home</NavLink>
                         </li>
                          <li className="nav-item">
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="Todolist">To-Do List</NavLink>
