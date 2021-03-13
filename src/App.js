@@ -11,6 +11,7 @@ import Apidata from './components/Hooks/Apidata';
 import Search from './components/Search/Search';
 import Home from './components/Home';
 import MyRegistration from './components/Registration';
+import Moviesearch from './components/Moviesearch';
 
 const Mydata = createContext();
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
          </Route>
           <Route path='/apidata' component={Apidata} />
           <Route path='/registration' component={MyRegistration} />
+          <Route path='/Moviesearch' component={Moviesearch} />
        </Switch>
        </div>
     </div>
