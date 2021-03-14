@@ -18,9 +18,10 @@ const Mynote = () => {
       })
     })
   }
+
   return (
     <div>
-         <CreateNote passNote = { addNote } />
+         <CreateNote passNote = { addNote }/>
       
         {addItem.map((val, index) => {
             return <Note key={index} id={index} title={val.title} content={val.content} onClick={deletenotes}/>

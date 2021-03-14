@@ -83,7 +83,7 @@ hr:not([size]) {
 	100%{transform: translateY(-10px);}
 }
 .hometext {
-  padding: 15% 0%;
+  padding: 13% 0%;
   max-width: 45%;
   float: left;
 }
@@ -94,3 +94,8 @@ hr:not([size]) {
 }
 .moviesdetails span{display: block;}
 .moviesdetails span, .moviesdetails h1, .moviesdetails .col{padding: 0px;}
+.searchpage .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
+    color: #000;
+    background-color: rgb(255, 193, 7);
+    border-color: rgb(255, 193, 7);
+}

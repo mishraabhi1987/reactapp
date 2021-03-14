@@ -46,13 +46,13 @@ const Menu = () => {
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/notes">Notes</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/search">Search</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/apidata">Users <span className="sr-only">(current)</span></NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/registration">Registration</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/search">Search</NavLink>
                         </li>
                         <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

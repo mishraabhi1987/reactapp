@@ -29,13 +29,22 @@ const Todolist = () => {
             })
         })
     }
+
+    // On enter 
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            addtodolist();
+        }
+    }
+
     return (
         <>
         <br/>
         <div className="todolist container">
             <h1><img src={img} style={{width: "75px", height: "100%"}}/> To-do List</h1>
             <hr/>
-            <input type="text" name="todobox" value={todolist} placeholder="Type your note here..." className="todobox" onChange={gettodotext} /><input className="btn btn-info" onClick={addtodolist} type="submit" value="+" style={{width: "8%", height: "52px", marginLeft: "-5px",  marginTop: "-5px"}} />
+            <input type="text" name="todobox" value={todolist} placeholder="Type your note here..." className="todobox" onChange={gettodotext} onKeyDown={handleKeyDown}/><input className="btn btn-info" onClick={addtodolist} type="submit" value="+" style={{width: "8%", height: "52px", marginLeft: "-5px",  marginTop: "-5px"}} />
             <ul className="list-group list-group-flush" style={{marginTop: "20px"}}>
             {displaytodo.map((todoval, index) => {
                 return (
