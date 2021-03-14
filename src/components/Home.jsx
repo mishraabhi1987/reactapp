@@ -1,7 +1,10 @@
 import React from 'react';
 import img from './Pics/it.png';
+import {useHistory} from 'react-router-dom';
 
 const Home = () => {
+    const navg = useHistory();
+    console.log(navg);
     return(
         <div>
             <div className="container">
@@ -10,7 +13,7 @@ const Home = () => {
                     <p>This website is created on React. You will feel the immersive exerience of React JS.</p>
                     <b style={{marginBottom: "5px", display: "block"}}>Features you can use:</b>
                     <p>You can explore ToDo App, Notes, Search for Images and Movies, Registration and Users...</p>
-                    <input type="submit" className="btn btn-outline-warning" value="Checkout" />
+                    <input type="submit" onClick={() => navg.push("Todolist")} className="btn btn-outline-warning" value="Checkout" />
                 </p>
             <img src={img} className="animateimg" />
             </div>
