@@ -13,7 +13,7 @@ if(newcurrentDate >= 1 && newcurrentDate < 12){
 
 }else if(newcurrentDate >=12 && newcurrentDate < 19){
     txtwelcomemsg = 'Good Afternoon';
-    txtcolor.color = "#E1D51B";
+    txtcolor.color = "#ffc107";
 }else{
     txtwelcomemsg = "Good Night";
     txtcolor.color = "#D28FE1";
@@ -40,33 +40,27 @@ const Menu = () => {
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/">Home</NavLink>
                         </li>
                          <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="Todolist">To-Do List</NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/Todolist">To-Do List</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="notes">Notes</NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/notes">Notes</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="webseries">Web Series</NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/apidata">Users <span className="sr-only">(current)</span></NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="apidata">Users <span className="sr-only">(current)</span></NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/registration">Registration</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="registration">Registration</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/search">Search</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/Moviesearch">Movie Search</NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/search">Search</NavLink>
                         </li>
                         <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Dropdown
                             </NavLink>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <NavLink exact activeClassName="activemenu" className="dropdown-item" to="Hooks">Hooks</NavLink>
-                                <NavLink exact activeClassName="activemenu" className="dropdown-item" to="">Link</NavLink>
+                                <NavLink exact activeClassName="activemenu" className="dropdown-item" to="#">Hooks</NavLink>
+                                <NavLink exact activeClassName="activemenu" className="dropdown-item" to="#">Link</NavLink>
                                 <div className="dropdown-divider"></div>
                                 <NavLink exact activeClassName="activemenu" className="dropdown-item" to="#">Something else here</NavLink>
                             </div>
