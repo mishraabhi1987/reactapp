@@ -14,8 +14,7 @@ const Moviesearch = () => {
     }
     const searcmovie = () => {
         async function getmoviedata(){
-            const res = await axio.get(`http://www.omdbapi.com/?t=${moviename}&plot=full&apikey=511b46e`);
-            console.log(`http://www.omdbapi.com/?t=${moviename}&plot=full&apikey=511b46e`);
+            const res = await axio.get(`https://www.omdbapi.com/?t=${moviename}&plot=full&apikey=511b46e`);
             if(res.data.Response != "False"){
                 setmoviedata(res.data);
                 setdisplay("block");

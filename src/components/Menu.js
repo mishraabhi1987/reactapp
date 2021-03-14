@@ -40,7 +40,7 @@ const Menu = () => {
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/">Home</NavLink>
                         </li>
                          <li className="nav-item">
-                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/Todolist">To-Do List</NavLink>
+                            <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/Todolist">To-Do App</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/notes">Notes</NavLink>
@@ -54,7 +54,7 @@ const Menu = () => {
                         <li className="nav-item">
                             <NavLink exact activeClassName="activemenu" className="nav-link" to="/reactapp/registration">Registration</NavLink>
                         </li>
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Dropdown
                             </NavLink>
@@ -64,7 +64,7 @@ const Menu = () => {
                                 <div className="dropdown-divider"></div>
                                 <NavLink exact activeClassName="activemenu" className="dropdown-item" to="#">Something else here</NavLink>
                             </div>
-                        </li>
+                        </li> */}
                     </ul>
                     {/* <form className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />

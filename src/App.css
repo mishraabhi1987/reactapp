@@ -61,7 +61,7 @@ nav{border-radius: 5px;}
 .welcomemsg b{font-size: 15px; font-weight: normal; color: #fff; float: right;}
 .keep{margin-bottom: 20px; color: #fff;}
 .keep h1{text-align: center; line-height: 50px; padding-top: 25px; color: #08BECE;}
-.form-container{width: 500px; margin: 0 auto; text-align: right;}
+/* .form-container{width: 500px; margin: 0 auto; text-align: right;} */
 .form-container input{margin-bottom: 10px;}
 .Registration{background-color: #fff; margin: 0 auto; width: 50%; padding: 20px; border-radius: 10px;}
 .todolist{background-color: #fff; margin: 0 auto; padding: 20px; border-radius: 10px;}
