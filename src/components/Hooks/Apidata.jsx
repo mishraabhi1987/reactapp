@@ -92,6 +92,7 @@ const Apidata = () => {
     // Add new user 
     const [showaddform, setaddform] = useState("false");
     const addnewuser = () => {
+        setaddstate("");
         if(showaddform === "false"){
             setaddform("true");
         }

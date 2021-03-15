@@ -33,7 +33,6 @@ const Moviesearch = () => {
     const [display, setdisplay] = useState("none");
     return(
         <>
-            <div className="row">
             <div className="col-sm-9 col-md-9 col-lg-6" style={{margin: "0 auto", padding: "10px", textAlign: "center"}}>
             <input type="text" style={{border: "2px solid #dc3545", display: "inline-table", width: "80%", height: "40px", marginBottom: "20px",}} className="form-control" onChange={getmoviename} onKeyDown={handleKeyDown} placeholder="Type to search movies (eg: spiderman, batman, avengers)"></input>
             <button type="button" className="btn btn-danger" style={{width: "10%", marginTop: "-3px", marginLeft: "-5px"}} onClick={searcmovie}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
@@ -43,7 +42,8 @@ const Moviesearch = () => {
             </div>
             {display === "error" ? <div className="alert alert-danger" role="alert" style={{textAlign: "center", maxWidth: "500px", margin: "0 auto"}}>Sorry, No Data Found</div> : null}
             {display === "none" || display === "error" ? null :
-           <Movie 
+          <div className="col-sm-12">
+          <Movie 
             Actors= {moviedata.Actors}
             Awards= {moviedata.Awards}
             Country= {moviedata.Country}
@@ -65,9 +65,8 @@ const Moviesearch = () => {
             imdbRating= {moviedata.imdbRating}
             imdbVotes= {moviedata.imdbVotes}
             totalSeasons= {moviedata.totalSeasons}
-           ></Movie>
+           ></Movie></div>
             }
-            </div>
         </>
     )
 

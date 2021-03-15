@@ -9,28 +9,28 @@ const Movie = (props) => {
                 <img src={props.Poster} style={{width: "250px", minHeight: "200px", height: "100%", maxHeight: "300px", borderRadius: "5px"}} />
             </div>
             <div className="col-sm-12 col-md-10 col-lg-8">
-                <div className="row">
+                <div>
                     <h1 style={{color: "#dc3545", paddingBottom: "20px", paddingLeft: "5px"}}>{props.Title}</h1>
                     <span><b>Year:</b> {props.Year}</span>
                     <span><b>Actors:</b> {props.Actors}</span>
                     <span><b>Genre:</b> {props.Genre}</span>
-                    <span><b>Writer:</b> {props.Writer}</span>
+                    <span><b>Writer:</b> <label>{props.Writer}</label></span>
                 </div>
                 <div className="row">
-                    <div className="col">
+                    <div className="col-sm-5 col-md-5">
                     <span><b>Released:</b> {props.Released}</span>
                     <span><b>Director:</b> {props.Director}</span>
                     <span><b>Language:</b> {props.Language}</span>
                     <span><b>Country:</b> {props.Country}</span>
                     </div>
-                    <div className="col">
+                    <div className="col-sm-6 col-md-6">
                     <span><b>Runtime:</b> {props.Runtime}</span>
                     <span><b>IMDB Rating:</b> {props.imdbRating}</span>
                     <span><b>IMDB Votes:</b> {props.imdbVotes}</span>
                     <span><b>Awards:</b> {props.Awards}</span>
                     </div>
                 </div>
-                <div className="row">
+                <div>
                     <p>{props.Plot}</p>
                 </div>
             </div>

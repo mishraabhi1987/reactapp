@@ -92,7 +92,7 @@ hr:not([size]) {
   .animateimg{float: none; width: 100%;}
   .hometext{float: none; max-width: 100%;}
 }
-.moviesdetails span{display: block;}
+.moviesdetails span{display: block; margin: 8px 0px;}
 .moviesdetails span, .moviesdetails h1, .moviesdetails .col{padding: 0px;}
 .searchpage .btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle{
     color: #000;
