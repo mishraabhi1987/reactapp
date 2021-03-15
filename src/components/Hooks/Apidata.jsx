@@ -78,8 +78,11 @@ const Apidata = () => {
                 return [...prevdata, addstate]
             });
             setmsgdisplay(() => {
-                return <div class="alert alert-success" role="alert" style={{textAlign: "center"}}><i>Yahoo!!</i> User {addstate.first_name} {addstate.last_name} has been added successfully.</div>
-            })
+                return <div class="alert alert-success" role="alert" style={{textAlign: "center"}}><i>congratulation!!</i> User {addstate.first_name} {addstate.last_name} has been added successfully.</div>
+            });
+            setaddstate(() => {
+                return {first_name: "", last_name: "", email: "", avatar: ""}
+            });
         })
         .catch(error => {
             console.log(error);
@@ -92,7 +95,6 @@ const Apidata = () => {
     // Add new user 
     const [showaddform, setaddform] = useState("false");
     const addnewuser = () => {
-        setaddstate("");
         if(showaddform === "false"){
             setaddform("true");
         }
