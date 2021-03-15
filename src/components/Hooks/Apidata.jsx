@@ -61,36 +61,38 @@ const Apidata = () => {
 
      // Adding data   
     const addempdata = () => {
-        if(addstate.first_name === null && addstate.last_name === null && addstate.email === null) {
+        if(addstate.first_name != "" && addstate.last_name != "" && addstate.email != "") {
+            setaddstate((oldatata) => {
+                return {
+                    ...oldatata, 
+                    id: newuserid + 1
+                }
+            });
+            axios.post("https://reqres.in/api/users", addstate)
+            .then(response => {
+                setstate((prevdata) => {
+                    return [...prevdata, addstate]
+                });
+                setmsgdisplay(() => {
+                    return <div class="alert alert-success" role="alert" style={{textAlign: "center"}}><i>congratulation!!</i> User {addstate.first_name} {addstate.last_name} has been added successfully.</div>
+                });
+                setaddstate(() => {
+                    return {first_name: "", last_name: "", email: "", avatar: ""}
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                setmsgdisplay(() => {
+                    return  <div class="alert alert-danger" role="alert" style={{textAlign: "center"}}>Oops... something went wrong. Please try again </div>
+                })
+            })
+           
+        }
+        else {
             setmsgdisplay(() => {
                 return  <div class="alert alert-danger" role="alert" style={{textAlign: "center"}}>Oops... something went wrong. Please try again </div>
             })
-        }else {
-        setaddstate((oldatata) => {
-            return {
-                ...oldatata, 
-                id: newuserid + 1
-            }
-        });
-        axios.post("https://reqres.in/api/users", addstate)
-        .then(response => {
-            setstate((prevdata) => {
-                return [...prevdata, addstate]
-            });
-            setmsgdisplay(() => {
-                return <div class="alert alert-success" role="alert" style={{textAlign: "center"}}><i>congratulation!!</i> User {addstate.first_name} {addstate.last_name} has been added successfully.</div>
-            });
-            setaddstate(() => {
-                return {first_name: "", last_name: "", email: "", avatar: ""}
-            });
-        })
-        .catch(error => {
-            console.log(error);
-            setmsgdisplay(() => {
-                return  <div class="alert alert-danger" role="alert" style={{textAlign: "center"}}>Oops... something went wrong. Please try again </div>
-            })
-        })
-    }
+        }
     };
     // Add new user 
     const [showaddform, setaddform] = useState("false");
