@@ -21,13 +21,15 @@ const Mynote = () => {
 
   return (
     <>
+    <div className="row">
     <div className="col-md-8 col-lg-8 col-xl-5" style={{margin: "0 auto", textAlign: "right"}}>
          <CreateNote passNote = { addNote }/>
     </div>
-    <div style={{width: "100%", margin: "0 auto", display: "block"}}>
+   <div style={{width: "100%", margin: "0 auto", display: "block"}}>
         {addItem.map((val, index) => {
             return <Note key={index} id={index} title={val.title} content={val.content} onClick={deletenotes}/>
         })}
+    </div>
     </div>
     </>
   );

@@ -8,14 +8,23 @@ const Todolist = () => {
         settodolist(event.target.value);
     }
 
+    // state for msg
+    const [msg, setmsg] = useState();
+
     // Add List
     const [displaytodo, setdisplaytodo] = useState([]);
     const addtodolist = () => {
-        if(todolist !== ""){
+        if(todolist){
             setdisplaytodo((prevdata) => {
                 return [...prevdata, todolist]
             });
             settodolist('');
+            setmsg("");
+        }
+        else{
+            setmsg(() => {
+                return  <div className="alert alert-danger" role="alert" style={{textAlign: "center"}}>Please type your task to add in the list</div>
+            })
         }
     }
 
@@ -44,7 +53,8 @@ const Todolist = () => {
         <div className="todolist container">
             <h1><img src={img} style={{width: "75px", height: "100%"}}/> To-do List</h1>
             <hr/>
-            <input type="text" name="todobox" value={todolist} placeholder="Type your note here..." className="todobox" onChange={gettodotext} onKeyDown={handleKeyDown}/><input className="btn btn-info" onClick={addtodolist} type="submit" value="+" style={{width: "8%", height: "52px", marginLeft: "-5px",  marginTop: "-5px"}} />
+            {msg}
+            <input type="text" name="todobox" value={todolist} placeholder="Type your to-do list here..." className="todobox" onChange={gettodotext} onKeyDown={handleKeyDown}/><input className="btn btn-info" onClick={addtodolist} type="submit" value="+" style={{width: "8%", height: "52px", marginLeft: "-5px",  marginTop: "-5px"}} />
             <ul className="list-group list-group-flush" style={{marginTop: "20px"}}>
             {displaytodo.map((todoval, index) => {
                 return (

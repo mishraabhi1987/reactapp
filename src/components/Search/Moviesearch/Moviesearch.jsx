@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import axio from 'axios';
 import Movie from './Movie';
 
@@ -14,7 +14,7 @@ const Moviesearch = () => {
     }
     const searcmovie = () => {
         async function getmoviedata(){
-            const res = await axio.get(`https://www.omdbapi.com/?t=${moviename}&plot=full&apikey=511b46e`);
+            const res = await axio.get(`https://omdbapi.com/?t=${moviename}&plot=full&apikey=511b46e`);
             if(res.data.Response != "False"){
                 setmoviedata(res.data);
                 setdisplay("block");
