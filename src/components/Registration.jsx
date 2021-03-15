@@ -38,7 +38,7 @@ const MyRegistration = () => {
     return(
         <div classNameName="contaner">
             {msgdisplay}
-            <form className="Registration" onSubmit={submitform}>
+            <form className="Registration col-sm-9 col-md-9 col-lg-6" onSubmit={submitform}>
             <h1 style={{textAlign:"center"}}><img src={img} style={{width: "50px", height: "100%", borderRadius: "25px"}}/> Registration Form</h1>
                 <div className="form-row col-md-12">
                 <div className="form-group col-md-12">

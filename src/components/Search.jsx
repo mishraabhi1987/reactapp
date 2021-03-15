@@ -8,7 +8,7 @@ const Search = () => {
 
     return(
         <>
-            <div className="searchpage" style={{width: "50%", margin: "0 auto", padding: "20px", textAlign: "center"}}>
+            <div className="searchpage col-sm-9 col-md-9 col-lg-6" style={{margin: "0 auto", padding: "20px", textAlign: "center"}}>
             <h3 style={{fontWeight: "Bold", color: "#00000", fontFamily: "Russo One"}}><img src={img} style={{width: "50px", height: "100%"}}/> My Search</h3>
             <div className="btn-group btn-group-toggle" data-toggle="buttons">
                 <label className="btn btn-secondary active" style={{margin: "0px"}}>

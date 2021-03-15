@@ -5,10 +5,10 @@ const Movie = (props) => {
         <>
         <div className="container moviesdetails" style={{backgroundColor: "rgb(250 240 240)", border: "1px solid #f3e4e4", padding: "10px", borderRadius: "10px"}}>
         <div className="row">
-            <div className="col-3">
-                <img src={props.Poster} style={{width: "250px", height: "100%", maxHeight: "300px", borderRadius: "5px"}} />
+            <div className="col-sm-11 col-md-2 col-lg-3">
+                <img src={props.Poster} style={{width: "250px", minHeight: "200px", height: "100%", maxHeight: "300px", borderRadius: "5px"}} />
             </div>
-            <div className="col-8">
+            <div className="col-sm-12 col-md-10 col-lg-8">
                 <div className="row">
                     <h1 style={{color: "#dc3545", paddingBottom: "20px", paddingLeft: "5px"}}>{props.Title}</h1>
                     <span><b>Year:</b> {props.Year}</span>

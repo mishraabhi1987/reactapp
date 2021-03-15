@@ -23,7 +23,7 @@ const Imagesearch = () => {
     }
     return(
         <>
-            <div style={{width: "50%", margin: "0 auto", padding: "10px", textAlign: "center"}}>
+            <div className="col-sm-9 col-md-9 col-lg-6" style={{margin: "0 auto", padding: "10px", textAlign: "center"}}>
             <input type="text" style={{border: "2px solid #17a2b8"}} className="form-control" value={searchtext} onChange={findsearch}  placeholder="Type to search images (eg: nature, sea, sky, burger)"></input>
             <br/><hr />
             {searchtext === "" ? null : <SearchResult name={searchtext} />}
