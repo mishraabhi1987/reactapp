@@ -10,7 +10,7 @@ const Home = () => {
       <div className="container">
         <p className="hometext">
           <h1 style={{ color: "#08BECE", paddingBottom: "15px" }}>
-            Welcome User to My Website
+            Welcome to My Website
           </h1>
           <p>
             This website is created on React. You will feel the immersive
