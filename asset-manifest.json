@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/reactapp/static/css/main.6623e674.chunk.css",
-    "main.js": "/reactapp/static/js/main.2c53533c.chunk.js",
-    "main.js.map": "/reactapp/static/js/main.2c53533c.chunk.js.map",
-    "runtime-main.js": "/reactapp/static/js/runtime-main.96c90ed6.js",
-    "runtime-main.js.map": "/reactapp/static/js/runtime-main.96c90ed6.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/reactapp/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.19cc618a.chunk.js": "/reactapp/static/js/2.19cc618a.chunk.js",
-    "static/js/2.19cc618a.chunk.js.map": "/reactapp/static/js/2.19cc618a.chunk.js.map",
+    "main.css": "/reactapp/static/css/main.079af052.chunk.css",
+    "main.js": "/reactapp/static/js/main.c9d87acd.chunk.js",
+    "main.js.map": "/reactapp/static/js/main.c9d87acd.chunk.js.map",
+    "runtime-main.js": "/reactapp/static/js/runtime-main.d4faa75d.js",
+    "runtime-main.js.map": "/reactapp/static/js/runtime-main.d4faa75d.js.map",
+    "static/css/2.c4e73993.chunk.css": "/reactapp/static/css/2.c4e73993.chunk.css",
+    "static/js/2.a2d2f043.chunk.js": "/reactapp/static/js/2.a2d2f043.chunk.js",
+    "static/js/2.a2d2f043.chunk.js.map": "/reactapp/static/js/2.a2d2f043.chunk.js.map",
     "index.html": "/reactapp/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/reactapp/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.6623e674.chunk.css.map": "/reactapp/static/css/main.6623e674.chunk.css.map",
-    "static/js/2.19cc618a.chunk.js.LICENSE.txt": "/reactapp/static/js/2.19cc618a.chunk.js.LICENSE.txt",
+    "static/css/2.c4e73993.chunk.css.map": "/reactapp/static/css/2.c4e73993.chunk.css.map",
+    "static/css/main.079af052.chunk.css.map": "/reactapp/static/css/main.079af052.chunk.css.map",
+    "static/js/2.a2d2f043.chunk.js.LICENSE.txt": "/reactapp/static/js/2.a2d2f043.chunk.js.LICENSE.txt",
     "static/media/it.cc72585e.png": "/reactapp/static/media/it.cc72585e.png",
     "static/media/mypic.a71fac69.jpg": "/reactapp/static/media/mypic.a71fac69.jpg",
     "static/media/note.9d41a373.png": "/reactapp/static/media/note.9d41a373.png",
@@ -20,10 +20,10 @@
     "static/media/todo.a9e9c176.png": "/reactapp/static/media/todo.a9e9c176.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.96c90ed6.js",
-    "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.19cc618a.chunk.js",
-    "static/css/main.6623e674.chunk.css",
-    "static/js/main.2c53533c.chunk.js"
+    "static/js/runtime-main.d4faa75d.js",
+    "static/css/2.c4e73993.chunk.css",
+    "static/js/2.a2d2f043.chunk.js",
+    "static/css/main.079af052.chunk.css",
+    "static/js/main.c9d87acd.chunk.js"
   ]
 }
