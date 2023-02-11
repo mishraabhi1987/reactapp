@@ -1,29 +1,19 @@
 {
   "files": {
-    "main.css": "/reactapp/static/css/main.079af052.chunk.css",
-    "main.js": "/reactapp/static/js/main.c9d87acd.chunk.js",
-    "main.js.map": "/reactapp/static/js/main.c9d87acd.chunk.js.map",
-    "runtime-main.js": "/reactapp/static/js/runtime-main.d4faa75d.js",
-    "runtime-main.js.map": "/reactapp/static/js/runtime-main.d4faa75d.js.map",
-    "static/css/2.c4e73993.chunk.css": "/reactapp/static/css/2.c4e73993.chunk.css",
-    "static/js/2.a2d2f043.chunk.js": "/reactapp/static/js/2.a2d2f043.chunk.js",
-    "static/js/2.a2d2f043.chunk.js.map": "/reactapp/static/js/2.a2d2f043.chunk.js.map",
+    "main.css": "/reactapp/static/css/main.34f7a91b.css",
+    "main.js": "/reactapp/static/js/main.e8a09d27.js",
+    "static/media/reg.png": "/reactapp/static/media/reg.64f653d4a0efa7f98d93.png",
+    "static/media/todo.png": "/reactapp/static/media/todo.a9e9c1765d227214e1f0.png",
+    "static/media/mypic.jpg": "/reactapp/static/media/mypic.a71fac691fd3ddecbebd.jpg",
+    "static/media/it.png": "/reactapp/static/media/it.cc72585e54e1609465c7.png",
+    "static/media/search.png": "/reactapp/static/media/search.908fbb84654414289bef.png",
+    "static/media/note.png": "/reactapp/static/media/note.9d41a37399bad1220509.png",
     "index.html": "/reactapp/index.html",
-    "static/css/2.c4e73993.chunk.css.map": "/reactapp/static/css/2.c4e73993.chunk.css.map",
-    "static/css/main.079af052.chunk.css.map": "/reactapp/static/css/main.079af052.chunk.css.map",
-    "static/js/2.a2d2f043.chunk.js.LICENSE.txt": "/reactapp/static/js/2.a2d2f043.chunk.js.LICENSE.txt",
-    "static/media/it.cc72585e.png": "/reactapp/static/media/it.cc72585e.png",
-    "static/media/mypic.a71fac69.jpg": "/reactapp/static/media/mypic.a71fac69.jpg",
-    "static/media/note.9d41a373.png": "/reactapp/static/media/note.9d41a373.png",
-    "static/media/reg.64f653d4.png": "/reactapp/static/media/reg.64f653d4.png",
-    "static/media/search.908fbb84.png": "/reactapp/static/media/search.908fbb84.png",
-    "static/media/todo.a9e9c176.png": "/reactapp/static/media/todo.a9e9c176.png"
+    "main.34f7a91b.css.map": "/reactapp/static/css/main.34f7a91b.css.map",
+    "main.e8a09d27.js.map": "/reactapp/static/js/main.e8a09d27.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.d4faa75d.js",
-    "static/css/2.c4e73993.chunk.css",
-    "static/js/2.a2d2f043.chunk.js",
-    "static/css/main.079af052.chunk.css",
-    "static/js/main.c9d87acd.chunk.js"
+    "static/css/main.34f7a91b.css",
+    "static/js/main.e8a09d27.js"
   ]
 }
