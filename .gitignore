@@ -1,6 +1,6 @@
-#ignore thumbnails created by windows
+# Ignore thumbnails created by Windows
 Thumbs.db
-#Ignore files build by Visual Studio
+# Ignore files built by Visual Studio
 *.user
 *.aps
 *.pch
@@ -19,7 +19,5 @@ Thumbs.db
 obj/
 [Rr]elease*/
 _ReSharper*/
-node_modules
-node_modules*/
-node_modules
+node_modules/
 package-lock.json
