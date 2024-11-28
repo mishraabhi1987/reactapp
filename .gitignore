@@ -21,3 +21,6 @@ obj/
 _ReSharper*/
 node_modules/
 package-lock.json
+
+# Ignore macOS system files
+.DS_Store
