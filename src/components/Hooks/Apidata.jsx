@@ -6,21 +6,52 @@ const Apidata = () => {
   const [state, setstate] = useState([]);
   const [message, setMessage] = useState({ text: "", type: "" });
 
+  // Load data from localStorage and API on component initialization
   useEffect(() => {
-    async function mydata() {
+    async function loadData() {
       try {
+        // First, try to load saved users from localStorage
+        const savedUsers = localStorage.getItem("apiUsers");
+        if (savedUsers) {
+          const parsedUsers = JSON.parse(savedUsers);
+          console.log("Loaded users from localStorage:", parsedUsers);
+          setstate(parsedUsers);
+          return; // If we have local data, don't fetch from API
+        }
+
+        // If no saved data, fetch from the API
+        console.log("No saved users found, fetching from API");
         const resp = await axios.get(`https://reqres.in/api/users?page=1`);
         setstate(resp.data.data);
       } catch (error) {
-        console.error("Failed to fetch users:", error);
+        console.error("Failed to load users:", error);
         setMessage({ text: "Failed to load user data.", type: "danger" });
       }
     }
-    mydata();
+    loadData();
   }, []);
 
+  // Save to localStorage whenever state changes
+  useEffect(() => {
+    try {
+      if (state.length > 0) {
+        console.log("Saving users to localStorage:", state);
+        localStorage.setItem("apiUsers", JSON.stringify(state));
+      }
+    } catch (error) {
+      console.error("Failed to save users to localStorage:", error);
+    }
+  }, [state]);
+
   const deletedata = (idToDelete) => {
-    setstate((prevdata) => prevdata.filter((user) => user.id !== idToDelete));
+    try {
+      console.log("Deleting user with ID:", idToDelete);
+      setstate((prevdata) => prevdata.filter((user) => user.id !== idToDelete));
+      // No need to update localStorage here since the state change will trigger the useEffect
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      setMessage({ text: "Failed to delete user", type: "danger" });
+    }
   };
 
   const [addstate, setaddstate] = useState({
@@ -88,6 +119,20 @@ const Apidata = () => {
       }
     } else {
       setMessage({ text: "Please fill all required fields.", type: "danger" });
+    }
+  };
+
+  // Function to clear all user data (useful for debugging)
+  const clearAllData = () => {
+    if (window.confirm("Are you sure you want to clear all user data?")) {
+      try {
+        localStorage.removeItem("apiUsers");
+        setstate([]);
+        setMessage({ text: "All user data has been cleared", type: "success" });
+      } catch (error) {
+        console.error("Error clearing data:", error);
+        setMessage({ text: "Failed to clear data", type: "danger" });
+      }
     }
   };
 
@@ -202,6 +247,17 @@ const Apidata = () => {
           {message.text}
         </div>
       )}
+      <div className="d-flex justify-content-between align-items-center mb-3">
+        <h4>User List</h4>
+        <button
+          className="btn btn-sm btn-outline-danger"
+          onClick={clearAllData}
+          title="Clear all users"
+        >
+          Reset Users
+        </button>
+      </div>
+
       <table
         className="table table-striped"
         style={{ backgroundColor: "#ffffff" }}
