@@ -25,12 +25,12 @@ const Home = () => {
           </p>
           <input
             type="submit"
-            onClick={() => navg.push("Todolist")}
+            onClick={() => navg.push("/Todolist")}
             className="btn btn-outline-warning"
             value="Checkout"
           />
         </p>
-        <img src={img} className="animateimg" />
+        <img src={img} alt="Technology illustration" className="animateimg" />
       </div>
     </div>
   );
