@@ -40,46 +40,52 @@ const Apidata = () => {
 
   const addempdata = () => {
     if (addstate.first_name && addstate.last_name && addstate.email) {
-      const apiPayload = {
-        name: `${addstate.first_name} ${addstate.last_name}`,
-        job: "employee",
-      };
+      try {
+        // Since reqres.in is a test API and might be unreliable,
+        // we'll implement a fallback to add the user locally even if the API call fails
+        const apiPayload = {
+          name: `${addstate.first_name} ${addstate.last_name}`,
+          job: "employee",
+        };
 
-      console.log("Sending data to API:", apiPayload);
+        console.log("Sending data to API:", apiPayload);
 
-      axios
-        .post("https://reqres.in/api/users", apiPayload)
-        .then((response) => {
-          console.log("API response:", response.data);
-          const apiResponse = response.data;
+        // Add the user immediately to improve user experience
+        const newUser = {
+          // Use nextId to ensure we have a unique ID
+          id: nextId,
+          email: addstate.email,
+          first_name: addstate.first_name,
+          last_name: addstate.last_name,
+          avatar: addstate.avatar || Userimg,
+        };
 
-          // Generate a temporary ID if one is not provided by the API
-          const tempId = apiResponse.id || nextId;
-
-          const newUser = {
-            id: tempId,
-            email: addstate.email,
-            first_name: addstate.first_name,
-            last_name: addstate.last_name,
-            avatar: addstate.avatar || Userimg,
-          };
-
-          console.log("Adding new user to state:", newUser);
-          setstate((prevdata) => [...prevdata, newUser]);
-          setMessage({
-            text: `Congratulation!! User ${newUser.first_name} ${newUser.last_name} has been added successfully.`,
-            type: "success",
-          });
-          setaddstate({ first_name: "", last_name: "", email: "", avatar: "" });
-          setaddform(false);
-        })
-        .catch((error) => {
-          console.error("API error:", error);
-          setMessage({
-            text: "Oops... something went wrong. Please try again",
-            type: "danger",
-          });
+        console.log("Adding new user to state:", newUser);
+        setstate((prevdata) => [...prevdata, newUser]);
+        setMessage({
+          text: `Congratulation!! User ${newUser.first_name} ${newUser.last_name} has been added successfully.`,
+          type: "success",
         });
+        setaddstate({ first_name: "", last_name: "", email: "", avatar: "" });
+        setaddform(false);
+
+        // Still try the API call (but don't depend on it)
+        axios
+          .post("https://reqres.in/api/users", apiPayload)
+          .then((response) => {
+            console.log("API response (for logging only):", response.data);
+          })
+          .catch((error) => {
+            console.error("API error (non-critical):", error);
+            // We don't show this error to the user since we already added the user locally
+          });
+      } catch (error) {
+        console.error("Error in add user function:", error);
+        setMessage({
+          text: "Oops... something went wrong. Please try again",
+          type: "danger",
+        });
+      }
     } else {
       setMessage({ text: "Please fill all required fields.", type: "danger" });
     }
