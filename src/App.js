@@ -14,10 +14,10 @@ import Footer from "./components/Footer";
 const Mydata = createContext();
 const App = () => {
   return (
-    <div>
+    <div className="app-wrapper">
       <Menu />
       <div
-        className="container-fluid"
+        className="container-fluid content-wrapper"
         style={{
           background: "rgb(255,255,255, 0.9)",
           borderRadius: "5px",
