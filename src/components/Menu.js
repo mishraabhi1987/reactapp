@@ -94,7 +94,7 @@ const Menu = () => {
                 exact
                 activeClassName="activemenu"
                 className="nav-link"
-                to="/reactapp/apidata"
+                to="/apidata"
               >
                 Users <span className="sr-only">(current)</span>
               </NavLink>
@@ -104,7 +104,7 @@ const Menu = () => {
                 exact
                 activeClassName="activemenu"
                 className="nav-link"
-                to="/reactapp/registration"
+                to="/registration"
               >
                 Registration
               </NavLink>
