@@ -98,4 +98,4 @@ hr:not([size]) {
     color: #000;
     background-color: rgb(255, 193, 7);
     border-color: rgb(255, 193, 7);
-}
+}.btn-delete-hover:hover { background-color: red !important; }
