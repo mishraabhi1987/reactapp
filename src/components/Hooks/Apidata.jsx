@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
 import Userimg from "../Pics/user.png";
 
 const Apidata = () => {
-  const history = useHistory();
-
   const [state, setstate] = useState([]);
   const [message, setMessage] = useState({ text: "", type: "" });
 
@@ -48,18 +45,26 @@ const Apidata = () => {
         job: "employee",
       };
 
+      console.log("Sending data to API:", apiPayload);
+
       axios
         .post("https://reqres.in/api/users", apiPayload)
         .then((response) => {
+          console.log("API response:", response.data);
           const apiResponse = response.data;
+
+          // Generate a temporary ID if one is not provided by the API
+          const tempId = apiResponse.id || nextId;
+
           const newUser = {
-            id: apiResponse.id,
+            id: tempId,
             email: addstate.email,
             first_name: addstate.first_name,
             last_name: addstate.last_name,
             avatar: addstate.avatar || Userimg,
           };
 
+          console.log("Adding new user to state:", newUser);
           setstate((prevdata) => [...prevdata, newUser]);
           setMessage({
             text: `Congratulation!! User ${newUser.first_name} ${newUser.last_name} has been added successfully.`,
@@ -69,7 +74,7 @@ const Apidata = () => {
           setaddform(false);
         })
         .catch((error) => {
-          console.log(error);
+          console.error("API error:", error);
           setMessage({
             text: "Oops... something went wrong. Please try again",
             type: "danger",
@@ -244,7 +249,9 @@ const Apidata = () => {
                       type="submit"
                       className="btn btn-light"
                       value="Edit"
-                      onClick={() => history.push("/Hooks")}
+                      onClick={() =>
+                        alert("Edit functionality not implemented yet")
+                      }
                     />
                     &nbsp;&nbsp;
                     <input
