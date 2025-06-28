@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactapp/static/css/main.34f7a91b.css",
-    "main.js": "/reactapp/static/js/main.e8a09d27.js",
+    "main.css": "/reactapp/static/css/main.d0b5b4aa.css",
+    "main.js": "/reactapp/static/js/main.669c35a1.js",
     "static/media/reg.png": "/reactapp/static/media/reg.64f653d4a0efa7f98d93.png",
     "static/media/todo.png": "/reactapp/static/media/todo.a9e9c1765d227214e1f0.png",
     "static/media/mypic.jpg": "/reactapp/static/media/mypic.a71fac691fd3ddecbebd.jpg",
@@ -9,11 +9,11 @@
     "static/media/search.png": "/reactapp/static/media/search.908fbb84654414289bef.png",
     "static/media/note.png": "/reactapp/static/media/note.9d41a37399bad1220509.png",
     "index.html": "/reactapp/index.html",
-    "main.34f7a91b.css.map": "/reactapp/static/css/main.34f7a91b.css.map",
-    "main.e8a09d27.js.map": "/reactapp/static/js/main.e8a09d27.js.map"
+    "main.d0b5b4aa.css.map": "/reactapp/static/css/main.d0b5b4aa.css.map",
+    "main.669c35a1.js.map": "/reactapp/static/js/main.669c35a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.34f7a91b.css",
-    "static/js/main.e8a09d27.js"
+    "static/css/main.d0b5b4aa.css",
+    "static/js/main.669c35a1.js"
   ]
 }

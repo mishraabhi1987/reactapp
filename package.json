@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^1.10.0",
     "bootstrap": "^5.3.7",
-    "gh-pages": "^6.3.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-bootstrap-icons": "^1.4.0",
@@ -43,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
